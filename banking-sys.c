@@ -106,3 +106,26 @@ void createAccount(struct Account account) {
     printf("Balance: %.2lf\n", account->balance);
 
 }
+
+void login(struct Account *account) {
+     int accountNumber;
+     char password[50];
+
+     printf("\n====Login====");
+
+     printf("Enter Account Number: ");
+     scanf("%d", &accountNumber);
+
+     printf("Enter Password:  ");
+     scanf(" %49s", &password);
+
+     if(accountNumber == account->accountNumber &&
+     strcmp(password, account->password) == 0) {
+     printf("\nLogin successful!\n");
+     printf("Welcome, %s!\n", account->name);
+
+     } else {
+          printf("\nInvalid account number or password.\n");
+     }
+ 
+}
