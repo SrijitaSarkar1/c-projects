@@ -84,3 +84,25 @@ int main() {
         }
     }
 }
+
+void createAccount(struct Account account) {
+     printf("\n====Create Account====\n");
+
+     printf("Enter Account Number:   ");
+     scanf("%d", &account->accountNumber);
+
+     printf("Enter your name: ");
+     scanf(" %[^\n]", &account->name);
+
+     printf("Create a password: ");
+     scanf("%49s", &account->password);
+
+     printf("Enter Initial deposit: ");
+     scanf("%1f", &account->balance);
+
+     printf("\nAccount created successfully!\n");
+    printf("Account Number: %d\n", account->accountNumber);
+    printf("Name: %s\n", account->name);
+    printf("Balance: %.2lf\n", account->balance);
+
+}
